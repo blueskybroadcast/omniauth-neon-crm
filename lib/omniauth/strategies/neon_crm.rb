@@ -192,8 +192,8 @@ module OmniAuth
       end
 
       def extract_custom_field_code(custom_field_value)
-        if custom_field_value['fieldId'].casecmp(options.client_options.custom_field_id).zero?
-          custom_field_value['fieldValue']
+        if custom_field_value['fieldId'].to_s.casecmp(options.client_options.custom_field_id).zero?
+          custom_field_value['fieldOptionId']
         end
       end
 
