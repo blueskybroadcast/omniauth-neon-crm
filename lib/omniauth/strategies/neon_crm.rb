@@ -28,6 +28,7 @@ module OmniAuth
       info { raw_info }
 
       def request_phase
+        redirect session[:neon_crm_authentication_url] if session[:neon_crm_authentication_url]
       end
 
       def callback_phase
